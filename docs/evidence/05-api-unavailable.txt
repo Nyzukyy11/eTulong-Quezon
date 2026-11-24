@@ -1,0 +1,75 @@
+Window: "eTulong | Staff Validation and Release Desk", App: eTulong.Desktop.exe.
+	0 window eTulong | Staff Validation and Release Desk Secondary Actions: Raise
+		1 title bar (settable, string) Value: eTulong | Staff Validation and Release Desk
+			2 menu bar System ID: MenuBar
+				72 menu item System
+			4 button Minimize
+			5 button Maximize
+			6 button Close
+		7 text eTulong
+		8 text Staff Validation and Release Desk | Quezon, Bukidnon
+		9 text DEMONSTRATION OPERATOR
+		10 combo box Value: Claim verification officer (Releasing officer)
+			180 text Claim verification officer (Releasing officer)
+		12 text Cannot reach the eTulong API. Start the server and refresh. No HTTP response was received.
+		13 button Refresh all
+		14 button (disabled) New application
+		15 text ASSISTANCE BATCH
+		16 combo box Value: Medical assistance - main batch | 4 of 5 slots available
+			181 text Medical assistance - main batch | 4 of 5 slots available
+		18 text 4 available / 5 total slots
+		19 text field (edit) (settable, string)
+		20 combo box Value: All
+			21 text All
+		22 button Find
+		23 list
+			24 list item (selectable) ET-000001 Ana Demo Released | Medical assistance - main batch
+				182 text ET-000001
+				183 text Ana Demo
+				184 text Released
+			78 list item (selectable) ET-000002 Fictional contender A Draft | Concurrency demonstration - last slot
+				185 text ET-000002
+				186 text Fictional contender A
+				187 text Draft
+			82 list item (selectable) ET-000003 Fictional contender B Submitted | Concurrency demonstration - last slot
+				188 text ET-000003
+				189 text Fictional contender B
+				190 text Submitted
+			86 scroll bar (settable, float) Value: 0 ID: PART_VerticalScrollBar
+				87 button Avalonia.Controls.PathIcon ID: PART_LineUpButton
+				88 button ID: PART_PageUpButton
+				89 button ID: PART_PageDownButton
+				90 thumb
+				91 button Avalonia.Controls.PathIcon ID: PART_LineDownButton
+		28 button Open selected case
+		29 text Page 1 | 3 matching cases
+		30 button Previous
+		31 button Next
+		32 text ET-000001 - Ana Demo
+		33 text Released | Slot: Awarded | Medical assistance - main batch
+		34 tab
+			35 tab item (selectable) 1. Intake and submission
+			36 tab item (selectable) 2. Review and decision
+			37 tab item (selectable) 3. Claim and history
+			135 pane
+				136 text Schedule an approved case, check originals on the claim date, then record the outcome.
+				137 text field (edit) (settable, string) Value: 2026-11-13
+				138 button (disabled) Save claim date
+				139 checkbox (check box) All original documents match the accepted copies
+				140 checkbox (check box) Previous hold has been resolved (if this case was held)
+				141 text field (edit) (settable, string)
+				142 button Record verification / release or hold
+				143 text A mismatch records a hold and blocks release. Released cases cannot be released again.
+				144 text PERSISTED CASE HISTORY
+				145 text Submitted: 11/13/2026 10:45 PM Claim date: 2026-11-13 Approved by Approving official: Fictional demonstration decision recorded by official 11/13/2026 11:13 PM | Held by Claim verification officer: Fictional original ID mismatch; release on hold 11/13/2026 11:14 PM | Released by Claim verification officer: Fictional hold resolved; all original documents checked
+				146 scroll bar (settable, float) Value: 0 ID: PART_VerticalScrollBar
+					147 button Avalonia.Controls.PathIcon ID: PART_LineUpButton
+					148 button ID: PART_PageUpButton
+					149 button ID: PART_PageDownButton
+					150 thumb
+					151 button Avalonia.Controls.PathIcon ID: PART_LineDownButton
+		71 text eTulong | Capacity is reserved at submission; approval records the official's decision.
+
+The focused UI element is 0 window eTulong | Staff Validation and Release Desk Secondary Actions: Raise.
+
+Focused element: 0 window eTulong | Staff Validation and Release Desk Secondary Actions: Raise

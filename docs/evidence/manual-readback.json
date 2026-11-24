@@ -1,0 +1,162 @@
+{
+  "independentHTTP": {
+    "id": 1,
+    "reference": "ET-000001",
+    "applicant": {
+      "id": 1,
+      "reference": "DEMO-001",
+      "fullName": "Ana Demo",
+      "barangay": "Demo Barangay",
+      "mobile": null
+    },
+    "batch": {
+      "id": 1,
+      "program": "Medical assistance - demonstration checklist",
+      "name": "Medical assistance - main batch",
+      "capacity": 5,
+      "reservedCount": 1,
+      "isOpen": true,
+      "available": 4
+    },
+    "status": "Released",
+    "submittedAt": "2026-11-13T14:45:41.131841+00:00",
+    "claimDate": "2026-11-13",
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Valid ID",
+        "mandatory": true
+      },
+      {
+        "id": 2,
+        "name": "Barangay endorsement",
+        "mandatory": true
+      },
+      {
+        "id": 3,
+        "name": "Medical certificate",
+        "mandatory": true
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "requirementId": 1,
+        "requirement": "Valid ID",
+        "fileName": "01-valid-id.png",
+        "decision": "Accepted",
+        "remarks": "Reviewed fictional ID image",
+        "reviewer": "Intake and review staff"
+      },
+      {
+        "id": 2,
+        "requirementId": 2,
+        "requirement": "Barangay endorsement",
+        "fileName": "02-barangay-endorsement.png",
+        "decision": "Accepted",
+        "remarks": "Fictional document reviewed for release verification",
+        "reviewer": "Intake and review staff"
+      },
+      {
+        "id": 3,
+        "requirementId": 3,
+        "requirement": "Medical certificate",
+        "fileName": "03-medical-certificate.png",
+        "decision": "Accepted",
+        "remarks": "Fictional document reviewed for release verification",
+        "reviewer": "Intake and review staff"
+      }
+    ],
+    "reservationState": "Awarded",
+    "approval": {
+      "decision": "Approved",
+      "official": "Approving official",
+      "remarks": "Fictional demonstration decision recorded by official",
+      "at": "2026-11-13T15:13:19.714403+00:00"
+    },
+    "verifications": [
+      {
+        "result": "Held",
+        "officer": "Claim verification officer",
+        "notes": "Fictional original ID mismatch; release on hold",
+        "at": "2026-11-13T15:13:59.288623+00:00"
+      },
+      {
+        "result": "Released",
+        "officer": "Claim verification officer",
+        "notes": "Fictional hold resolved; all original documents checked",
+        "at": "2026-11-13T15:14:07.126879+00:00"
+      }
+    ]
+  },
+  "freshPostgreSQL": {
+    "cases": [
+      {
+        "Id": 1,
+        "ApplicantId": 1,
+        "BatchId": 1,
+        "Status": "Released",
+        "CreatedAt": "2026-11-13T22:40:05.37528+08:00",
+        "SubmittedAt": "2026-11-13T22:45:41.131841+08:00",
+        "ClaimDate": "2026-11-13"
+      },
+      {
+        "Id": 2,
+        "ApplicantId": 2,
+        "BatchId": 2,
+        "Status": "Draft",
+        "CreatedAt": "2026-11-13T23:12:46.778783+08:00",
+        "SubmittedAt": null,
+        "ClaimDate": null
+      },
+      {
+        "Id": 3,
+        "ApplicantId": 3,
+        "BatchId": 2,
+        "Status": "Submitted",
+        "CreatedAt": "2026-11-13T23:12:46.83465+08:00",
+        "SubmittedAt": "2026-11-13T23:12:46.894863+08:00",
+        "ClaimDate": null
+      }
+    ],
+    "reservations": [
+      {
+        "Id": 1,
+        "CaseId": 1,
+        "BatchId": 1,
+        "State": "Awarded",
+        "CreatedAt": "2026-11-13T22:45:41.125747+08:00"
+      },
+      {
+        "Id": 2,
+        "CaseId": 3,
+        "BatchId": 2,
+        "State": "Reserved",
+        "CreatedAt": "2026-11-13T23:12:46.894701+08:00"
+      }
+    ],
+    "batches": [
+      {
+        "Id": 1,
+        "ProgramId": 1,
+        "Name": "Medical assistance - main batch",
+        "Capacity": 5,
+        "ReservedCount": 1,
+        "IsOpen": true,
+        "ActualAllocations": 1
+      },
+      {
+        "Id": 2,
+        "ProgramId": 1,
+        "Name": "Concurrency demonstration - last slot",
+        "Capacity": 1,
+        "ReservedCount": 1,
+        "IsOpen": true,
+        "ActualAllocations": 1
+      }
+    ],
+    "approvalCount": 1,
+    "verificationCount": 2
+  },
+  "launcher": "Start-eTulong.cmd reinitialized without resetting data and reopened published application; existing release history was inspected"
+}

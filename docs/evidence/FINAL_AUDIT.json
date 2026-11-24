@@ -1,0 +1,14 @@
+{
+  "localDate": "2026-11-13",
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "automatedAcceptance": "8 passed,0 failed,0 skipped",
+  "liveConcurrency": "one409 and one200; one reservation in capacity1 batch",
+  "observedWorkflow": "draft,missing-document rejection,submission,review,endorsement,approval,schedule,hold,release",
+  "restart": "published launcher re-opened same release history",
+  "freshDatabaseReadback": "case/event/slot counts consistent",
+  "verifiedImages": 5,
+  "awsDeployment": "not performed; instructions supplied",
+  "scopeApproval": "instructor review pending",
+  "knownNativeDialogLimit": "open/cancel observed; successful filename selection not claimed; attachment command separately tested with controlled picker"
+}

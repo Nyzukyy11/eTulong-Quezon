@@ -1,0 +1,9 @@
+ETulongTests.AcceptanceTests.FP03_ReviewReplacementAndEndorsementRules : Passed
+ETulongTests.AcceptanceTests.FP04_OfficialDecisionAndDenialFreeCapacity : Passed
+ETulongTests.AcceptanceTests.FP01_IntakeDocumentsSubmissionAndRetry : Passed
+ETulongTests.AcceptanceTests.FP08_ProtocolTransportAndLostAcknowledgement : Passed
+ETulongTests.AcceptanceTests.FP05_ClaimHoldResolutionAndSingleRelease : Passed
+ETulongTests.AcceptanceTests.FP06_PostWriteFailuresRollbackCapacityAndRelease : Passed
+ETulongTests.AcceptanceTests.FP02_TwoApplicantsCompeteForLastSlot : Passed
+ETulongTests.AcceptanceTests.FP07_FreshContextsImagesAndActualApiRestart : Passed
+8 passed; 0 failed; 0 skipped. Real HTTP + PostgreSQL.

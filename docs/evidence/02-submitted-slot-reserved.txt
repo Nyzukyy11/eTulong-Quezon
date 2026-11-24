@@ -1,0 +1,74 @@
+Window: "eTulong | Staff Validation and Release Desk", App: eTulong.Desktop.exe.
+	0 window eTulong | Staff Validation and Release Desk Secondary Actions: Raise
+		1 title bar (settable, string) Value: eTulong | Staff Validation and Release Desk
+			2 menu bar System ID: MenuBar
+				3 menu item System
+			4 button Minimize
+			5 button Maximize
+			6 button Close
+		7 text eTulong
+		8 text Staff Validation and Release Desk | Quezon, Bukidnon
+		9 text DEMONSTRATION OPERATOR
+		10 combo box Value: Intake and review staff (Staff)
+			413 text Intake and review staff (Staff)
+		12 text ET-000001: Submitted. Saved and refreshed.
+		13 button Refresh all
+		14 button New application
+		15 text ASSISTANCE BATCH
+		16 combo box Value: Medical assistance - main batch | 4 of 5 slots available
+			414 text Medical assistance - main batch | 4 of 5 slots available
+		18 text 4 available / 5 total slots
+		19 text field (edit) (settable, string)
+		20 combo box Value: All
+			21 text All
+		22 button Find
+		23 list
+			61 list item (selectable) ET-000001 Ana Demo Submitted | Medical assistance - main batch
+				415 text ET-000001
+				416 text Ana Demo
+				417 text Submitted
+		24 button Open selected case
+		25 text Page 1 | 1 matching cases
+		26 button Previous
+		27 button Next
+		28 text ET-000001 - Ana Demo
+		29 text Submitted | Slot: Reserved | Medical assistance - main batch
+		30 tab
+			31 tab item (selectable) 1. Intake and submission
+			32 tab item (selectable) 2. Review and decision
+			33 tab item (selectable) 3. Claim and history
+			382 pane
+				383 text Create a draft, attach all required images, then submit to reserve one slot.
+				384 text Applicant reference
+				385 text field (edit) (settable, string) Value: DEMO-001
+				386 text Full name
+				387 text field (edit) (settable, string) Value: Ana Demo
+				388 text Barangay
+				389 text field (edit) (settable, string) Value: Demo Barangay
+				390 text Mobile (optional)
+				391 text field (edit) (settable, string)
+				392 button Save new draft
+				393 text DOCUMENT CHECKLIST
+				394 combo box Value: Valid ID (required)
+					418 text Valid ID (required)
+				396 button Attach / replace PNG or JPEG
+				397 list
+					419 text Valid ID
+					420 text Pending
+					421 text Barangay endorsement
+					422 text Pending
+					423 text Medical certificate
+					424 text Pending
+				404 button Submit application and reserve slot
+				405 text A draft does not reserve capacity. Submission succeeds only while a slot remains.
+				406 scroll bar (settable, float) Value: 108.00000000000006 ID: PART_VerticalScrollBar
+					407 button Avalonia.Controls.PathIcon ID: PART_LineUpButton
+					408 button ID: PART_PageUpButton
+					409 button ID: PART_PageDownButton
+					410 thumb
+					411 button Avalonia.Controls.PathIcon ID: PART_LineDownButton
+		57 text eTulong | Capacity is reserved at submission; approval records the official's decision.
+
+The focused UI element is 404 button Submit application and reserve slot.
+
+Focused element: 404 button Submit application and reserve slot

@@ -1,0 +1,34 @@
+[
+  {
+    "test": "ETulongTests.AcceptanceTests.FP03_ReviewReplacementAndEndorsementRules",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP04_OfficialDecisionAndDenialFreeCapacity",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP01_IntakeDocumentsSubmissionAndRetry",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP08_ProtocolTransportAndLostAcknowledgement",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP05_ClaimHoldResolutionAndSingleRelease",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP06_PostWriteFailuresRollbackCapacityAndRelease",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP02_TwoApplicantsCompeteForLastSlot",
+    "result": "Passed"
+  },
+  {
+    "test": "ETulongTests.AcceptanceTests.FP07_FreshContextsImagesAndActualApiRestart",
+    "result": "Passed"
+  }
+]

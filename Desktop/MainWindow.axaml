@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="ETulongDesktop.MainWindow" Title="eTulong | Staff Validation and Release Desk" Width="1180" Height="760" MinWidth="980" MinHeight="650" WindowStartupLocation="CenterScreen" Background="#F2F5F8">
+ <Grid RowDefinitions="Auto,Auto,*,Auto">
+  <Border Background="#17334A" Padding="24,17"><Grid ColumnDefinitions="*,320"><StackPanel><TextBlock Text="eTulong" Foreground="White" FontSize="29" FontWeight="Bold"/><TextBlock Text="Staff Validation and Release Desk | Quezon, Bukidnon" Foreground="#C8DBE8" Margin="0,3,0,0"/></StackPanel><StackPanel Grid.Column="1"><TextBlock Text="DEMONSTRATION OPERATOR" Foreground="#C8DBE8" FontSize="11"/><ComboBox ItemsSource="{Binding Operators}" SelectedItem="{Binding SelectedOperator}" HorizontalAlignment="Stretch" IsEnabled="{Binding Ready}" Margin="0,6,0,0"/></StackPanel></Grid></Border>
+  <Border Grid.Row="1" Background="#E5F2EE" Padding="20,10"><Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="10"><TextBlock Text="{Binding Message}" TextWrapping="Wrap" VerticalAlignment="Center"/><Button Grid.Column="1" Content="Refresh all" Command="{Binding RefreshCommand}" IsEnabled="{Binding Ready}"/><Button Grid.Column="2" Content="New application" Command="{Binding NewCommand}" IsEnabled="{Binding IsStaff}"/></Grid></Border>
+  <Grid Grid.Row="2" ColumnDefinitions="310,*" Margin="16" ColumnSpacing="16">
+   <Border Background="White" CornerRadius="9" Padding="15"><Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,Auto,Auto" RowSpacing="8">
+    <TextBlock Text="ASSISTANCE BATCH" Classes="label" FontSize="11"/>
+    <ComboBox Grid.Row="1" ItemsSource="{Binding Batches}" SelectedItem="{Binding SelectedBatch}" HorizontalAlignment="Stretch" IsEnabled="{Binding Ready}"/>
+    <TextBlock Grid.Row="2" Text="{Binding CapacityLabel}" Foreground="#176B68" FontWeight="Bold" TextWrapping="Wrap"/>
+    <TextBox Grid.Row="3" Text="{Binding Search}" Watermark="Search name, applicant reference or ET-..."/>
+    <Grid Grid.Row="4" ColumnDefinitions="*,Auto" ColumnSpacing="8"><ComboBox ItemsSource="{Binding Statuses}" SelectedItem="{Binding StatusFilter}" HorizontalAlignment="Stretch"/><Button Grid.Column="1" Content="Find" Command="{Binding FindCommand}" IsEnabled="{Binding Ready}"/></Grid>
+    <ListBox Grid.Row="5" ItemsSource="{Binding Cases}" SelectedItem="{Binding SelectedCase}" Background="#F5F7FA"><ListBox.ItemTemplate><DataTemplate><StackPanel Margin="3,7"><TextBlock Text="{Binding Reference}" FontWeight="Bold"/><TextBlock Text="{Binding Applicant}" TextWrapping="Wrap"/><TextBlock Text="{Binding Status}" Foreground="#176B68" FontSize="12"/></StackPanel></DataTemplate></ListBox.ItemTemplate></ListBox>
+    <Button Grid.Row="6" Content="Open selected case" Command="{Binding OpenCommand}" IsEnabled="{Binding Ready}" HorizontalAlignment="Stretch" Classes="primary"/>
+    <StackPanel Grid.Row="7"><TextBlock Text="{Binding PageLabel}" FontSize="11"/><StackPanel Orientation="Horizontal" Spacing="8" Margin="0,5,0,0"><Button Content="Previous" Command="{Binding PreviousCommand}" IsEnabled="{Binding Ready}"/><Button Content="Next" Command="{Binding NextCommand}" IsEnabled="{Binding Ready}"/></StackPanel></StackPanel>
+   </Grid></Border>
+   <Border Grid.Column="1" Background="White" CornerRadius="9" Padding="18"><Grid RowDefinitions="Auto,Auto,*" RowSpacing="7"><TextBlock Text="{Binding CaseHeading}" FontSize="20" FontWeight="Bold"/><TextBlock Grid.Row="1" Text="{Binding CaseState}" TextWrapping="Wrap" Foreground="#52647A"/>
+    <TabControl Grid.Row="2" SelectedIndex="{Binding WorkspaceTab}">
+     <TabItem Header="1. Intake and submission"><ScrollViewer><StackPanel Spacing="8" Margin="0,12,10,10">
+      <TextBlock Text="Create a draft, attach all required images, then submit to reserve one slot." TextWrapping="Wrap"/>
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="12"><StackPanel Spacing="4"><TextBlock Text="Applicant reference" Classes="label"/><TextBox Text="{Binding ApplicantReference}" Watermark="Example: DEMO-001"/><TextBlock Text="Full name" Classes="label"/><TextBox Text="{Binding FullName}"/></StackPanel><StackPanel Grid.Column="1" Spacing="4"><TextBlock Text="Barangay" Classes="label"/><TextBox Text="{Binding Barangay}"/><TextBlock Text="Mobile (optional)" Classes="label"/><TextBox Text="{Binding Mobile}"/></StackPanel></Grid>
+      <Button Content="Save new draft" Command="{Binding CreateDraftCommand}" IsEnabled="{Binding IsStaff}"/>
+      <Separator Margin="0,6"/><TextBlock Text="DOCUMENT CHECKLIST" Classes="label" FontSize="12"/>
+      <ComboBox ItemsSource="{Binding Requirements}" SelectedItem="{Binding SelectedRequirement}" HorizontalAlignment="Stretch"/>
+      <Button Content="Attach / replace PNG or JPEG" Command="{Binding AttachCommand}" IsEnabled="{Binding IsStaff}"/>
+      <ItemsControl ItemsSource="{Binding Documents}"><ItemsControl.ItemTemplate><DataTemplate><Grid ColumnDefinitions="*,100" Margin="0,4"><TextBlock Text="{Binding Requirement}"/><TextBlock Grid.Column="1" Text="{Binding Decision}" Foreground="#176B68"/></Grid></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+      <Button Content="Submit application and reserve slot" Command="{Binding SubmitCommand}" IsEnabled="{Binding IsStaff}" Classes="primary" Margin="0,8,0,0"/>
+      <TextBlock Text="A draft does not reserve capacity. Submission succeeds only while a slot remains." FontSize="12" TextWrapping="Wrap" Foreground="#52647A"/>
+     </StackPanel></ScrollViewer></TabItem>
+     <TabItem Header="2. Review and decision"><ScrollViewer><StackPanel Spacing="8" Margin="0,12,10,10">
+      <TextBlock Text="Review each current document before endorsement. The official records the decision." TextWrapping="Wrap"/>
+      <ListBox ItemsSource="{Binding Documents}" SelectedItem="{Binding SelectedDocument}" Height="105"><ListBox.ItemTemplate><DataTemplate><TextBlock><Run Text="{Binding Requirement}"/><Run Text="  |  "/><Run Text="{Binding Decision}"/></TextBlock></DataTemplate></ListBox.ItemTemplate></ListBox>
+      <Button Content="Preview document" Command="{Binding LoadImageCommand}" IsEnabled="{Binding Ready}"/>
+      <Border Background="#F3F5F7" Padding="8" CornerRadius="5"><StackPanel><TextBlock Text="{Binding PreviewLabel}" FontSize="11" TextWrapping="Wrap"/><Image Source="{Binding Preview}" Height="180" Stretch="Uniform"/></StackPanel></Border>
+      <Grid ColumnDefinitions="160,*" ColumnSpacing="10"><ComboBox ItemsSource="{Binding ReviewChoices}" SelectedItem="{Binding ReviewDecision}" HorizontalAlignment="Stretch"/><TextBox Grid.Column="1" Text="{Binding ReviewRemarks}" Watermark="Review remarks / required rejection reason"/></Grid>
+      <StackPanel Orientation="Horizontal" Spacing="8"><Button Content="Save document review" Command="{Binding ReviewCommand}" IsEnabled="{Binding IsStaff}"/><Button Content="Endorse case" Command="{Binding EndorseCommand}" IsEnabled="{Binding IsStaff}"/></StackPanel>
+      <Separator/><TextBlock Text="OFFICIAL DECISION" Classes="label" FontSize="12"/><TextBox Text="{Binding DecisionRemarks}" Watermark="Required decision remarks"/>
+      <StackPanel Orientation="Horizontal" Spacing="8"><Button Content="Approve case" Command="{Binding ApproveCommand}" IsEnabled="{Binding IsOfficial}" Classes="primary"/><Button Content="Deny and free reserved slot" Command="{Binding DenyCommand}" IsEnabled="{Binding IsOfficial}"/></StackPanel>
+     </StackPanel></ScrollViewer></TabItem>
+     <TabItem Header="3. Claim and history"><ScrollViewer><StackPanel Spacing="9" Margin="0,12,10,10">
+      <TextBlock Text="Schedule an approved case, check originals on the claim date, then record the outcome." TextWrapping="Wrap"/>
+      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10"><TextBox Text="{Binding ClaimDate}" Watermark="YYYY-MM-DD"/><Button Grid.Column="1" Content="Save claim date" Command="{Binding ScheduleCommand}" IsEnabled="{Binding IsStaff}"/></Grid>
+      <Separator/><CheckBox Content="All original documents match the accepted copies" IsChecked="{Binding OriginalsMatch}" IsEnabled="{Binding IsReleasingOfficer}"/>
+      <CheckBox Content="Previous hold has been resolved (if this case was held)" IsChecked="{Binding PreviousHoldResolved}" IsEnabled="{Binding IsReleasingOfficer}"/>
+      <TextBox Text="{Binding VerificationNotes}" Watermark="Required verification notes or hold reason" AcceptsReturn="True" Height="65"/>
+      <Button Content="Record verification / release or hold" Command="{Binding VerifyCommand}" IsEnabled="{Binding IsReleasingOfficer}" Classes="primary"/>
+      <TextBlock Text="A mismatch records a hold and blocks release. Released cases cannot be released again." TextWrapping="Wrap" FontSize="12" Foreground="#52647A"/>
+      <Separator/><TextBlock Text="PERSISTED CASE HISTORY" Classes="label" FontSize="12"/><TextBlock Text="{Binding History}" TextWrapping="Wrap"/>
+     </StackPanel></ScrollViewer></TabItem>
+    </TabControl>
+   </Grid></Border>
+  </Grid>
+  <Border Grid.Row="3" Padding="20,7" Background="#E8EDF2"><Grid ColumnDefinitions="*,180"><TextBlock Text="eTulong | Capacity is reserved at submission; approval records the official's decision." FontSize="11" Foreground="#52647A"/><ProgressBar Grid.Column="1" IsIndeterminate="True" IsVisible="{Binding Busy}" Height="5" VerticalAlignment="Center"/></Grid></Border>
+ </Grid>
+</Window>

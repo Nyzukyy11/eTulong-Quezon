@@ -1,0 +1,7 @@
+{
+  "method": "Actual execution of Scripts/Concurrency-Demo.ps1 against published API and local PostgreSQL",
+  "case2Http": 409,
+  "case3Http": 200,
+  "observedConsole": "PASS: two requests, one reservation, zero remaining slots.",
+  "note": "Structured transcription of observed tool console; not an invented raw log. Stronger gated database-contention proof is in FP02 final.trx."
+}

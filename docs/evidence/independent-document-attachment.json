@@ -1,0 +1,251 @@
+[
+  {
+    "path": "cases/1",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "reference": "ET-000001",
+      "applicant": {
+        "id": 1,
+        "reference": "DEMO-001",
+        "fullName": "Ana Demo",
+        "barangay": "Demo Barangay",
+        "mobile": null
+      },
+      "batch": {
+        "id": 1,
+        "program": "Medical assistance - demonstration checklist",
+        "name": "Medical assistance - main batch",
+        "capacity": 5,
+        "reservedCount": 0,
+        "isOpen": true,
+        "available": 5
+      },
+      "status": "Draft",
+      "submittedAt": null,
+      "claimDate": null,
+      "requirements": [
+        {
+          "id": 1,
+          "name": "Valid ID",
+          "mandatory": true
+        },
+        {
+          "id": 2,
+          "name": "Barangay endorsement",
+          "mandatory": true
+        },
+        {
+          "id": 3,
+          "name": "Medical certificate",
+          "mandatory": true
+        }
+      ],
+      "documents": [],
+      "reservationState": null,
+      "approval": null,
+      "verifications": []
+    }
+  },
+  {
+    "path": "cases/1/documents",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "reference": "ET-000001",
+      "applicant": {
+        "id": 1,
+        "reference": "DEMO-001",
+        "fullName": "Ana Demo",
+        "barangay": "Demo Barangay",
+        "mobile": null
+      },
+      "batch": {
+        "id": 1,
+        "program": "Medical assistance - demonstration checklist",
+        "name": "Medical assistance - main batch",
+        "capacity": 5,
+        "reservedCount": 0,
+        "isOpen": true,
+        "available": 5
+      },
+      "status": "Draft",
+      "submittedAt": null,
+      "claimDate": null,
+      "requirements": [
+        {
+          "id": 1,
+          "name": "Valid ID",
+          "mandatory": true
+        },
+        {
+          "id": 2,
+          "name": "Barangay endorsement",
+          "mandatory": true
+        },
+        {
+          "id": 3,
+          "name": "Medical certificate",
+          "mandatory": true
+        }
+      ],
+      "documents": [
+        {
+          "id": 1,
+          "requirementId": 1,
+          "requirement": "Valid ID",
+          "fileName": "01-valid-id.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        }
+      ],
+      "reservationState": null,
+      "approval": null,
+      "verifications": []
+    }
+  },
+  {
+    "path": "cases/1/documents",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "reference": "ET-000001",
+      "applicant": {
+        "id": 1,
+        "reference": "DEMO-001",
+        "fullName": "Ana Demo",
+        "barangay": "Demo Barangay",
+        "mobile": null
+      },
+      "batch": {
+        "id": 1,
+        "program": "Medical assistance - demonstration checklist",
+        "name": "Medical assistance - main batch",
+        "capacity": 5,
+        "reservedCount": 0,
+        "isOpen": true,
+        "available": 5
+      },
+      "status": "Draft",
+      "submittedAt": null,
+      "claimDate": null,
+      "requirements": [
+        {
+          "id": 1,
+          "name": "Valid ID",
+          "mandatory": true
+        },
+        {
+          "id": 2,
+          "name": "Barangay endorsement",
+          "mandatory": true
+        },
+        {
+          "id": 3,
+          "name": "Medical certificate",
+          "mandatory": true
+        }
+      ],
+      "documents": [
+        {
+          "id": 1,
+          "requirementId": 1,
+          "requirement": "Valid ID",
+          "fileName": "01-valid-id.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        },
+        {
+          "id": 2,
+          "requirementId": 2,
+          "requirement": "Barangay endorsement",
+          "fileName": "02-barangay-endorsement.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        }
+      ],
+      "reservationState": null,
+      "approval": null,
+      "verifications": []
+    }
+  },
+  {
+    "path": "cases/1/documents",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "reference": "ET-000001",
+      "applicant": {
+        "id": 1,
+        "reference": "DEMO-001",
+        "fullName": "Ana Demo",
+        "barangay": "Demo Barangay",
+        "mobile": null
+      },
+      "batch": {
+        "id": 1,
+        "program": "Medical assistance - demonstration checklist",
+        "name": "Medical assistance - main batch",
+        "capacity": 5,
+        "reservedCount": 0,
+        "isOpen": true,
+        "available": 5
+      },
+      "status": "Draft",
+      "submittedAt": null,
+      "claimDate": null,
+      "requirements": [
+        {
+          "id": 1,
+          "name": "Valid ID",
+          "mandatory": true
+        },
+        {
+          "id": 2,
+          "name": "Barangay endorsement",
+          "mandatory": true
+        },
+        {
+          "id": 3,
+          "name": "Medical certificate",
+          "mandatory": true
+        }
+      ],
+      "documents": [
+        {
+          "id": 1,
+          "requirementId": 1,
+          "requirement": "Valid ID",
+          "fileName": "01-valid-id.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        },
+        {
+          "id": 2,
+          "requirementId": 2,
+          "requirement": "Barangay endorsement",
+          "fileName": "02-barangay-endorsement.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        },
+        {
+          "id": 3,
+          "requirementId": 3,
+          "requirement": "Medical certificate",
+          "fileName": "03-medical-certificate.png",
+          "decision": "Pending",
+          "remarks": null,
+          "reviewer": null
+        }
+      ],
+      "reservationState": null,
+      "approval": null,
+      "verifications": []
+    }
+  }
+]
